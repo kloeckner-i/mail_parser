@@ -10,7 +10,7 @@ defmodule MailParser do
 
   use RustlerPrecompiled,
     otp_app: :mail_parser,
-    crate: :mailparser,
+    crate: :mail_parser_nif,
     base_url: "#{github_url}/releases/download/v#{version}",
     force_build: System.get_env("RUSTLER_PRECOMPILATION_FORCE_BUILD") in ["1", "true"],
     version: version

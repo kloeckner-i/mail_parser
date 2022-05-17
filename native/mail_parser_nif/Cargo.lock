@@ -55,7 +55,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "mailparser"
+name = "mail_parser_nif"
 version = "0.1.0"
 dependencies = [
  "base64",
