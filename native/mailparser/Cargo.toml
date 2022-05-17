@@ -1,0 +1,18 @@
+[package]
+name = "mailparser"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[lib]
+name = "mailparser"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+base64 = "0.13.0"
+mail-parser = "0.4.5"
+rustler = "0.25.0"
+
+[profile.release]
+strip = "debuginfo"
