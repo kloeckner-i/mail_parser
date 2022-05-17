@@ -16,3 +16,4 @@ rustler = "0.25.0"
 
 [profile.release]
 strip = "debuginfo"
+lto = true
