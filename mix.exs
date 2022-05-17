@@ -1,10 +1,12 @@
 defmodule MailParser.MixProject do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [
       app: :mail_parser,
-      version: "0.1.0-dev",
+      version: @version,
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps()
