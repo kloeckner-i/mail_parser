@@ -1,11 +1,11 @@
-use mail_parser::*;
+use mail_parser::{BodyPart, Message, MessageAttachment, MessagePart};
 use rustler::{Atom, Error, NifResult, NifStruct};
 
 #[rustler::nif]
-fn parse(input: &str) -> NifResult<(Atom, Vec<Attachment>)> {
-    rustler::atoms! { ok, error, }
+fn extract_nested_attachments(raw_message: &str) -> NifResult<(Atom, Vec<Attachment>)> {
+    rustler::atoms! { ok, }
 
-    match Message::parse(input.as_bytes()) {
+    match Message::parse(raw_message.as_bytes()) {
         Some(message) => Ok((ok(), extract_attachments(&message))),
         None => Err(Error::Atom("error")),
     }
@@ -21,17 +21,16 @@ struct Attachment {
 
 impl Attachment {
     fn create<'x>(part: &'x impl BodyPart<'x>) -> Attachment {
-        let name = part
-            .get_attachment_name()
-            .unwrap_or("untitled.txt")
-            .to_string();
-
+        let name = part.get_attachment_name().unwrap_or("untitled").to_string();
         let content_bytes = base64::encode(part.get_contents());
 
-        let content_type = part.get_content_type().map(|ct| {
-            let roottype = ct.get_type();
-            let subtype = ct.get_subtype().unwrap_or("unknown");
-            format!("{roottype}/{subtype}")
+        let content_type = part.get_content_type().map(|content_type| {
+            let roottype = content_type.get_type();
+
+            match content_type.get_subtype() {
+                Some(subtype) => format!("{roottype}/{subtype}"),
+                None => roottype.to_string(),
+            }
         });
 
         Attachment {
@@ -75,4 +74,4 @@ fn extract_attachments(message: &Message) -> Vec<Attachment> {
     acc
 }
 
-rustler::init!("Elixir.MailParser", [parse]);
+rustler::init!("Elixir.MailParser", [extract_nested_attachments]);

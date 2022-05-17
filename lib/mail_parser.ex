@@ -1,7 +1,6 @@
 defmodule MailParser do
   @moduledoc """
-  A NIF for extracting attachments from mails in the Internet Message Format
-  standard.
+  NIF binding of mail_parsser using Rustler.
   """
 
   mix_config = Mix.Project.config()
@@ -12,11 +11,18 @@ defmodule MailParser do
     otp_app: :mail_parser,
     crate: :mail_parser_nif,
     base_url: "#{github_url}/releases/download/v#{version}",
-    force_build: System.get_env("RUSTLER_PRECOMPILATION_FORCE_BUILD") in ["1", "true"],
+    force_build: System.get_env("FORCE_BUILD") in ["1", "true"],
     version: version
 
   alias __MODULE__.Attachment
 
-  @spec parse(String.t()) :: {:ok, [Attachment.t()]} | {:error, term}
-  def parse(_input), do: :erlang.nif_error(:nif_not_loaded)
+  @doc """
+  Parses string containing a RFC5322 raw message and extracts all nested
+  attachments.
+
+  A best-effort is made to parse the message and if no headers are found
+  `:error` is returned.
+  """
+  @spec extract_nested_attachments(String.t()) :: {:ok, [Attachment.t()]} | :error
+  def extract_nested_attachments(_raw_message), do: :erlang.nif_error(:nif_not_loaded)
 end
