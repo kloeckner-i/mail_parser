@@ -47,7 +47,10 @@ defmodule MailParser.MixProject do
     [
       files: [
         "lib",
-        "native",
+        "native/mail_parser_nif/Cargo.toml",
+        "native/mail_parser_nif/Cargo.lock",
+        "native/mail_parser_nif/src",
+        "native/mail_parser_nif/.cargo",
         "checksum-*.exs",
         "mix.exs",
         "README.md",
