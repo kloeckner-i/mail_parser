@@ -22,3 +22,7 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 arb-*.tar
 
+/priv/native
+
+# The checksum files for precompiled NIFs
+checksum-*.exs
