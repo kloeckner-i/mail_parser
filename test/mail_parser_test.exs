@@ -16,10 +16,10 @@ defmodule MailParserTest do
               %MailParser.Attachment{
                 name: "smime.p7s",
                 content_type: "application/x-pkcs7-signature",
-                content_bytes: "cmVkYWN0ZWQ="
+                content_bytes: "redacted"
               }
             ]} = MailParser.extract_nested_attachments(raw_message)
 
-    assert Base.decode64!(pdf_content_bytes) == File.read!("test/fixtures/sample.pdf")
+    assert pdf_content_bytes == File.read!("test/fixtures/sample.pdf")
   end
 end

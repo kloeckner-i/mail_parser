@@ -1,28 +1,19 @@
 use mail_parser::{BodyPart, Message, MessageAttachment, MessagePart};
-use rustler::{Atom, Error, NifResult, NifStruct};
-
-#[rustler::nif]
-fn extract_nested_attachments(raw_message: &str) -> NifResult<(Atom, Vec<Attachment>)> {
-    rustler::atoms! { ok, }
-
-    match Message::parse(raw_message.as_bytes()) {
-        Some(message) => Ok((ok(), extract_attachments(&message))),
-        None => Err(Error::Atom("error")),
-    }
-}
+use rustler::{Atom, Binary, Env, Error, NifResult, NifStruct, OwnedBinary, Term};
+use rustler::{Decoder, Encoder};
 
 #[derive(Clone, Debug, NifStruct)]
 #[module = "MailParser.Attachment"]
 struct Attachment {
     name: String,
     content_type: Option<String>,
-    content_bytes: String,
+    content_bytes: ContentBytes,
 }
 
 impl Attachment {
     fn create<'x>(part: &'x impl BodyPart<'x>) -> Attachment {
         let name = part.get_attachment_name().unwrap_or("untitled").to_string();
-        let content_bytes = base64::encode(part.get_contents());
+        let content_bytes = ContentBytes::new(part.get_contents());
 
         let content_type = part.get_content_type().map(|content_type| {
             let roottype = content_type.get_type();
@@ -38,6 +29,28 @@ impl Attachment {
             content_bytes,
             content_type,
         }
+    }
+}
+
+#[derive(Clone, Debug)]
+struct ContentBytes(Vec<u8>);
+
+impl ContentBytes {
+    fn new(content_bytes: &[u8]) -> Self {
+        ContentBytes(content_bytes.to_vec())
+    }
+}
+
+impl Encoder for ContentBytes {
+    fn encode<'a>(&self, env: Env<'a>) -> Term<'a> {
+        let mut owned_binary = OwnedBinary::new(self.0.len()).expect("allocation failed");
+        owned_binary.as_mut_slice().copy_from_slice(&self.0);
+        Binary::from_owned(owned_binary, env).to_term(env)
+    }
+}
+impl<'a> Decoder<'a> for ContentBytes {
+    fn decode(term: Term) -> NifResult<ContentBytes> {
+        Ok(Self(term.to_binary().to_vec()))
     }
 }
 
@@ -57,10 +70,11 @@ fn extract_attachments(message: &Message) -> Vec<Attachment> {
             MessagePart::Message(attached_message) => {
                 match &attached_message.body {
                     MessageAttachment::Parsed(message) => {
-                        acc.extend(extract_attachments(message.as_ref()));
+                        acc.extend(extract_attachments(message));
                     }
-                    MessageAttachment::Raw(_) => {
-                        acc.extend(extract_attachments(&attached_message.parse_raw().unwrap()));
+                    MessageAttachment::Raw(_raw_bytes) => {
+                        let message = attached_message.parse_raw().unwrap();
+                        acc.extend(extract_attachments(&message));
                     }
                 }
 
@@ -72,6 +86,16 @@ fn extract_attachments(message: &Message) -> Vec<Attachment> {
     }
 
     acc
+}
+
+#[rustler::nif]
+fn extract_nested_attachments(raw_message: &str) -> NifResult<(Atom, Vec<Attachment>)> {
+    rustler::atoms! { ok, }
+
+    match Message::parse(raw_message.as_bytes()) {
+        Some(message) => Ok((ok(), extract_attachments(&message))),
+        None => Err(Error::Atom("error")),
+    }
 }
 
 rustler::init!("Elixir.MailParser", [extract_nested_attachments]);

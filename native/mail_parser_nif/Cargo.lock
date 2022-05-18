@@ -12,12 +12,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "base64"
-version = "0.13.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "904dfeac50f3cdaba28fc6f57fdcddb75f49ed61346676a78c4ffe55877802fd"
-
-[[package]]
 name = "heck"
 version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -39,7 +33,6 @@ checksum = "545e2643e5f923cdea238bb826277e68967797f7d50523932d10a87dfcc940ac"
 name = "mail_parser_nif"
 version = "0.1.0"
 dependencies = [
- "base64",
  "mail-parser",
  "rustler",
 ]
