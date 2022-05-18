@@ -9,3 +9,8 @@ updates:
     directory: "/native/mail_parser_nif"
     schedule:
       interval: "monthly"
+
+  - package-ecosystem: mix
+    directory: "/"
+    schedule:
+      interval: "monthly"
