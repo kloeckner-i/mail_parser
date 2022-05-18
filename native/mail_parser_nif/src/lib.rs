@@ -2,6 +2,12 @@ use mail_parser::{BodyPart, Message, MessageAttachment, MessagePart};
 use rustler::{Atom, Binary, Env, Error, NifResult, NifStruct, OwnedBinary, Term};
 use rustler::{Decoder, Encoder};
 
+mod atoms {
+    rustler::atoms! {
+        ok
+    }
+}
+
 #[derive(Clone, Debug, NifStruct)]
 #[module = "MailParser.Attachment"]
 struct Attachment {
@@ -73,8 +79,9 @@ fn extract_attachments(message: &Message) -> Vec<Attachment> {
                         acc.extend(extract_attachments(message));
                     }
                     MessageAttachment::Raw(_raw_bytes) => {
-                        let message = attached_message.parse_raw().unwrap();
-                        acc.extend(extract_attachments(&message));
+                        if let Some(message) = attached_message.parse_raw() {
+                            acc.extend(extract_attachments(&message));
+                        }
                     }
                 }
 
@@ -90,10 +97,8 @@ fn extract_attachments(message: &Message) -> Vec<Attachment> {
 
 #[rustler::nif]
 fn extract_nested_attachments(raw_message: &str) -> NifResult<(Atom, Vec<Attachment>)> {
-    rustler::atoms! { ok, }
-
     match Message::parse(raw_message.as_bytes()) {
-        Some(message) => Ok((ok(), extract_attachments(&message))),
+        Some(message) => Ok((atoms::ok(), extract_attachments(&message))),
         None => Err(Error::Atom("error")),
     }
 }
