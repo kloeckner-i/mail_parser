@@ -17,7 +17,7 @@ defmodule MailParser do
   alias __MODULE__.Attachment
 
   @doc """
-  Parses string containing a RFC5322 raw message and extracts all nested
+  Parses a string containing a RFC5322 raw message and extracts all nested
   attachments.
 
   A best-effort is made to parse the message and if no headers are found
@@ -25,8 +25,8 @@ defmodule MailParser do
 
   ### Example
 
-    iex> MailParser.extract_nested_attachments(raw_message)
-    {:ok, [%MailParser.Attachment{name: "example.pdf", content_type: "application/pdf", content_bytes: "..."}]}
+      iex> MailParser.extract_nested_attachments(raw_message)
+      {:ok, [%MailParser.Attachment{name: "example.pdf", content_type: "application/pdf", content_bytes: "..."}]}
 
   """
   @spec extract_nested_attachments(String.t()) :: {:ok, [Attachment.t()]} | :error
