@@ -1,0 +1,232 @@
+From: Joe Schmoe <joe@example.com>
+To: Max Mustermann <max.mustermann@example.com>
+CC: "Arno Nuehm (Arno.Nuehm@example.com)"
+	<Arno.Nuehm@example.com>
+Subject: Bestellung 0340/2022
+Date: Tue, 17 May 2022 08:05:04 +0000
+Content-Type: multipart/signed; protocol="application/x-pkcs7-signature"; micalg="sha-256"; boundary="----08D56E512143FF456D2DCB607E33BFA2"
+MIME-Version: 1.0
+
+------08D56E512143FF456D2DCB607E33BFA2
+Content-Language: de-DE
+Content-Type: multipart/mixed;
+	boundary="_004_ed5d9311ddb44eacb432be2a9c07ab12eastecgmbhde_"
+MIME-Version: 1.0
+
+--_004_ed5d9311ddb44eacb432be2a9c07ab12eastecgmbhde_
+Content-Type: multipart/alternative;
+	boundary="_000_ed5d9311ddb44eacb432be2a9c07ab12eastecgmbhde_"
+
+--_000_ed5d9311ddb44eacb432be2a9c07ab12eastecgmbhde_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Bestellung 0340/2022
+
+Mit freundlichen Gr=FC=DFen
+
+i.A. A.Nuehm
+
+
+Wie Sie wissen, k=F6nnen =FCber das Internet versandte E-Mails unter fremde=
+m Namen erstellt oder der Inhalt ver=E4ndert werden. Aus diesem Grund sind =
+unsere als E-Mail verschickten Nachrichten grunds=E4tzlich keine rechtsverb=
+indlichen Erkl=E4rungen.
+Der Inhalt dieser E-Mail samt Anlagen ist vertraulich und u. U. rechtlich g=
+esch=FCtzt. Der Inhalt ist ausschlie=DFlich an einen bestimmten Empf=E4nger=
+ gerichtet. Eine Weitergabe, die Herstellung von Kopien oder der sonstige G=
+ebrauch durch Nichtadressaten ist nicht erlaubt. Ich bitte daher jeden ande=
+ren Empf=E4nger, der diese E-Mail versehentlich erh=E4lt, mich umgehend zu =
+informieren und die Nachricht zu l=F6schen.
+
+As you are aware, messages sent by e-mail can be manipulated by third parti=
+es. For this reason our e-mail messages are generally not legally binding. =
+This electronic message (including any attachments) contains confidential i=
+nformation and may be privileged or otherwise protected from disclosure. Th=
+e information is intended to be for the use of the intended addressee only.=
+ Please be aware that any disclosure, copy, distribution or use of the cont=
+ents of this message is prohibited. If you have received this e-mail in err=
+or please notify me immediately by reply e-mail and delete this message and=
+ any attachments from your system. Thank you for your co-operation.
+
+
+--_000_ed5d9311ddb44eacb432be2a9c07ab12eastecgmbhde_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:x=3D"urn:schemas-microsoft-com:office:excel" xmlns:m=3D"http://schema=
+s.microsoft.com/office/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html=
+40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 14 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:TKTypeRegular;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.E-MailFormatvorlage17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 70.85pt 2.0cm 70.85pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"DE" link=3D"blue" vlink=3D"purple">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Bestellung 0340/2022<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:DE">Mit freundli=
+chen Gr=FC=DFen<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:DE"><o:p>&nbsp;<=
+/o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"mso-fareast-language:DE">i.A. A.Nuehm=
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:&quot;Ari=
+al&quot;,&quot;sans-serif&quot;;color:gray;mso-fareast-language:DE">Wie Sie=
+ wissen, k=F6nnen =FCber das Internet versandte E-Mails unter fremdem Namen=
+ erstellt oder der Inhalt ver=E4ndert werden. Aus diesem Grund
+ sind unsere als E-Mail verschickten Nachrichten grunds=E4tzlich keine rech=
+tsverbindlichen Erkl=E4rungen.<br>
+Der Inhalt dieser E-Mail samt Anlagen ist vertraulich und u. U. rechtlich g=
+esch=FCtzt. Der Inhalt ist ausschlie=DFlich an einen bestimmten Empf=E4nger=
+ gerichtet. Eine Weitergabe, die Herstellung von Kopien oder der sonstige G=
+ebrauch durch Nichtadressaten ist nicht
+ erlaubt. Ich bitte daher jeden anderen Empf=E4nger, der diese E-Mail verse=
+hentlich erh=E4lt, mich umgehend zu informieren und die Nachricht zu l=F6sc=
+hen.<br>
+<br>
+</span><span lang=3D"EN-GB" style=3D"font-size:8.0pt;font-family:&quot;Aria=
+l&quot;,&quot;sans-serif&quot;;color:gray;mso-fareast-language:DE">As you a=
+re aware, messages sent by e-mail can be manipulated by third parties. For =
+this reason our e-mail messages are generally not legally
+ binding. This electronic message (including any attachments) contains conf=
+idential information and may be privileged or otherwise protected from disc=
+losure. The information is intended to be for the use of the intended addre=
+ssee only. Please be aware that
+ any disclosure, copy, distribution or use of the contents of this message =
+is prohibited. If you have received this e-mail in error please notify me i=
+mmediately by reply e-mail and delete this message and any attachments from=
+ your system.
+</span><span style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,&quot;s=
+ans-serif&quot;;color:gray;mso-fareast-language:DE">Thank you for your co-o=
+peration.</span><span style=3D"font-family:&quot;Tahoma&quot;,&quot;sans-se=
+rif&quot;;mso-fareast-language:DE"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+</body>
+</html>
+
+--_000_ed5d9311ddb44eacb432be2a9c07ab12eastecgmbhde_--
+
+--_004_ed5d9311ddb44eacb432be2a9c07ab12eastecgmbhde_
+Content-Type: application/pdf;
+	name="?ISO-8859-1?Q?a?= =?ISO-8859-2?Q?_b?="
+Content-Description: =?iso-8859-1?Q?Best_340_Kl=F6ckner_FL-Stahl.pdf?=
+Content-Disposition: attachment;
+	filename="=?iso-8859-1?Q?Best_340_Kl=F6ckner_FL-Stahl.pdf?="; size=125793;
+	creation-date="Tue, 17 May 2022 08:04:15 GMT";
+	modification-date="Tue, 17 May 2022 08:03:16 GMT"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjMNCiXi48/TDQoNCjEgMCBvYmoNCjw8DQovVHlwZSAvQ2F0YWxvZw0KL091dGxpbmVz
+IDIgMCBSDQovUGFnZXMgMyAwIFINCj4+DQplbmRvYmoNCg0KMiAwIG9iag0KPDwNCi9UeXBlIC9P
+dXRsaW5lcw0KL0NvdW50IDANCj4+DQplbmRvYmoNCg0KMyAwIG9iag0KPDwNCi9UeXBlIC9QYWdl
+cw0KL0NvdW50IDINCi9LaWRzIFsgNCAwIFIgNiAwIFIgXSANCj4+DQplbmRvYmoNCg0KNCAwIG9i
+ag0KPDwNCi9UeXBlIC9QYWdlDQovUGFyZW50IDMgMCBSDQovUmVzb3VyY2VzIDw8DQovRm9udCA8
+PA0KL0YxIDkgMCBSIA0KPj4NCi9Qcm9jU2V0IDggMCBSDQo+Pg0KL01lZGlhQm94IFswIDAgNjEy
+LjAwMDAgNzkyLjAwMDBdDQovQ29udGVudHMgNSAwIFINCj4+DQplbmRvYmoNCg0KNSAwIG9iag0K
+PDwgL0xlbmd0aCAxMDc0ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBU
+Zg0KNTcuMzc1MCA3MjIuMjgwMCBUZA0KKCBBIFNpbXBsZSBQREYgRmlsZSApIFRqDQpFVA0KQlQN
+Ci9GMSAwMDEwIFRmDQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIFRoaXMgaXMgYSBzbWFsbCBkZW1v
+bnN0cmF0aW9uIC5wZGYgZmlsZSAtICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAg
+NjY0LjcwNDAgVGQNCigganVzdCBmb3IgdXNlIGluIHRoZSBWaXJ0dWFsIE1lY2hhbmljcyB0dXRv
+cmlhbHMuIE1vcmUgdGV4dC4gQW5kIG1vcmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjku
+MjUwMCA2NTIuNzUyMCBUZA0KKCB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBB
+bmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDYyOC44NDgw
+IFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuIEFuZCBt
+b3JlIHRleHQuIEFuZCBtb3JlICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNjE2
+Ljg5NjAgVGQNCiggdGV4dC4gQW5kIG1vcmUgdGV4dC4gQm9yaW5nLCB6enp6ei4gQW5kIG1vcmUg
+dGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kICkgVGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1
+MDAgNjA0Ljk0NDAgVGQNCiggbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0
+LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRm
+DQo2OS4yNTAwIDU5Mi45OTIwIFRkDQooIEFuZCBtb3JlIHRleHQuIEFuZCBtb3JlIHRleHQuICkg
+VGoNCkVUDQpCVA0KL0YxIDAwMTAgVGYNCjY5LjI1MDAgNTY5LjA4ODAgVGQNCiggQW5kIG1vcmUg
+dGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1v
+cmUgKSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA1NTcuMTM2MCBUZA0KKCB0ZXh0
+LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBFdmVuIG1vcmUuIENvbnRpbnVlZCBvbiBw
+YWdlIDIgLi4uKSBUag0KRVQNCmVuZHN0cmVhbQ0KZW5kb2JqDQoNCjYgMCBvYmoNCjw8DQovVHlw
+ZSAvUGFnZQ0KL1BhcmVudCAzIDAgUg0KL1Jlc291cmNlcyA8PA0KL0ZvbnQgPDwNCi9GMSA5IDAg
+UiANCj4+DQovUHJvY1NldCA4IDAgUg0KPj4NCi9NZWRpYUJveCBbMCAwIDYxMi4wMDAwIDc5Mi4w
+MDAwXQ0KL0NvbnRlbnRzIDcgMCBSDQo+Pg0KZW5kb2JqDQoNCjcgMCBvYmoNCjw8IC9MZW5ndGgg
+Njc2ID4+DQpzdHJlYW0NCjIgSg0KQlQNCjAgMCAwIHJnDQovRjEgMDAyNyBUZg0KNTcuMzc1MCA3
+MjIuMjgwMCBUZA0KKCBTaW1wbGUgUERGIEZpbGUgMiApIFRqDQpFVA0KQlQNCi9GMSAwMDEwIFRm
+DQo2OS4yNTAwIDY4OC42MDgwIFRkDQooIC4uLmNvbnRpbnVlZCBmcm9tIHBhZ2UgMS4gWWV0IG1v
+cmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gKSBUag0KRVQNCkJUDQovRjEg
+MDAxMCBUZg0KNjkuMjUwMCA2NzYuNjU2MCBUZA0KKCBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0
+ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSB0ZXh0LiBBbmQgbW9yZSApIFRqDQpFVA0KQlQN
+Ci9GMSAwMDEwIFRmDQo2OS4yNTAwIDY2NC43MDQwIFRkDQooIHRleHQuIE9oLCBob3cgYm9yaW5n
+IHR5cGluZyB0aGlzIHN0dWZmLiBCdXQgbm90IGFzIGJvcmluZyBhcyB3YXRjaGluZyApIFRqDQpF
+VA0KQlQNCi9GMSAwMDEwIFRmDQo2OS4yNTAwIDY1Mi43NTIwIFRkDQooIHBhaW50IGRyeS4gQW5k
+IG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4gQW5kIG1vcmUgdGV4dC4g
+KSBUag0KRVQNCkJUDQovRjEgMDAxMCBUZg0KNjkuMjUwMCA2NDAuODAwMCBUZA0KKCBCb3Jpbmcu
+ICBNb3JlLCBhIGxpdHRsZSBtb3JlIHRleHQuIFRoZSBlbmQsIGFuZCBqdXN0IGFzIHdlbGwuICkg
+VGoNCkVUDQplbmRzdHJlYW0NCmVuZG9iag0KDQo4IDAgb2JqDQpbL1BERiAvVGV4dF0NCmVuZG9i
+ag0KDQo5IDAgb2JqDQo8PA0KL1R5cGUgL0ZvbnQNCi9TdWJ0eXBlIC9UeXBlMQ0KL05hbWUgL0Yx
+DQovQmFzZUZvbnQgL0hlbHZldGljYQ0KL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcNCj4+DQpl
+bmRvYmoNCg0KMTAgMCBvYmoNCjw8DQovQ3JlYXRvciAoUmF2ZSBcKGh0dHA6Ly93d3cubmV2cm9u
+YS5jb20vcmF2ZVwpKQ0KL1Byb2R1Y2VyIChOZXZyb25hIERlc2lnbnMpDQovQ3JlYXRpb25EYXRl
+IChEOjIwMDYwMzAxMDcyODI2KQ0KPj4NCmVuZG9iag0KDQp4cmVmDQowIDExDQowMDAwMDAwMDAw
+IDY1NTM1IGYNCjAwMDAwMDAwMTkgMDAwMDAgbg0KMDAwMDAwMDA5MyAwMDAwMCBuDQowMDAwMDAw
+MTQ3IDAwMDAwIG4NCjAwMDAwMDAyMjIgMDAwMDAgbg0KMDAwMDAwMDM5MCAwMDAwMCBuDQowMDAw
+MDAxNTIyIDAwMDAwIG4NCjAwMDAwMDE2OTAgMDAwMDAgbg0KMDAwMDAwMjQyMyAwMDAwMCBuDQow
+MDAwMDAyNDU2IDAwMDAwIG4NCjAwMDAwMDI1NzQgMDAwMDAgbg0KDQp0cmFpbGVyDQo8PA0KL1Np
+emUgMTENCi9Sb290IDEgMCBSDQovSW5mbyAxMCAwIFINCj4+DQoNCnN0YXJ0eHJlZg0KMjcxNA0K
+JSVFT0YNCg==
+
+--_004_ed5d9311ddb44eacb432be2a9c07ab12eastecgmbhde_--
+
+------08D56E512143FF456D2DCB607E33BFA2
+Content-Type: application/x-pkcs7-signature; name="smime.p7s"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="smime.p7s"
+
+cmVkYWN0ZWQ=
+
+------08D56E512143FF456D2DCB607E33BFA2--

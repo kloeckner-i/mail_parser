@@ -22,6 +22,12 @@ defmodule MailParser do
 
   A best-effort is made to parse the message and if no headers are found
   `:error` is returned.
+
+  ### Example
+
+    iex> MailParser.extract_nested_attachments(raw_message)
+    {:ok, [%MailParser.Attachment{name: "example.pdf", content_type: "application/pdf", content_bytes: "..."}]}
+
   """
   @spec extract_nested_attachments(String.t()) :: {:ok, [Attachment.t()]} | :error
   def extract_nested_attachments(_raw_message), do: :erlang.nif_error(:nif_not_loaded)
