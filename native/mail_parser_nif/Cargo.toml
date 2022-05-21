@@ -1,8 +1,10 @@
 [package]
 name = "mail_parser_nif"
 version = "0.1.0"
-authors = []
+authors = ["kloeckner-i"]
 edition = "2021"
+repository = "https://github.com/kloeckner-i/mail_parser"
+keywords = ["elixir"]
 
 [lib]
 name = "mail_parser_nif"
