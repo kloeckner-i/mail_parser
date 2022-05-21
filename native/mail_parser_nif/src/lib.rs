@@ -51,10 +51,10 @@ impl Encoder for ContentBytes {
     fn encode<'a>(&self, env: Env<'a>) -> Term<'a> {
         let mut owned_binary = OwnedBinary::new(self.0.len()).expect("allocation failed");
         owned_binary.as_mut_slice().copy_from_slice(&self.0);
-        Binary::from_owned(owned_binary, env).to_term(env)
+        Binary::from_owned(owned_binary, env).encode(env)
     }
 }
-impl<'a> Decoder<'a> for ContentBytes {
+impl Decoder<'_> for ContentBytes {
     fn decode(term: Term) -> NifResult<ContentBytes> {
         Ok(Self(term.to_binary().to_vec()))
     }

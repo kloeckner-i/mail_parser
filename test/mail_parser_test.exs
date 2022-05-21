@@ -22,4 +22,8 @@ defmodule MailParserTest do
 
     assert pdf_content_bytes == File.read!("test/fixtures/sample.pdf")
   end
+
+  test "returns error if parsing fails" do
+    assert :error = MailParser.extract_nested_attachments("")
+  end
 end
