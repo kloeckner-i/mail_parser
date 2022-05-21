@@ -12,7 +12,7 @@ on:
       # Just run on main branch if "native" path changed. Tags will always run.
       - "native/**"
     tags:
-      - '*'
+      - "*"
 
 defaults:
   run:
