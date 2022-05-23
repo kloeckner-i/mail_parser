@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.3.2] - 2022-05-23
+
+- Use fork of rustler_precompiled which adds `aarch64-unknown-linux-musl` to the available targets
+
 ## [0.3.1] - 2022-05-23
 
 - Precompile NIF for `aarch64-unknown-linux-musl`
@@ -21,7 +25,8 @@
 
 ## [0.1.0] - 2022-05-17
 
-[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.3.1...HEAD
+[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.3.2...HEAD
+[0.3.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.2
 [0.3.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.1
 [0.3.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.0
 [0.2.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.2.0
