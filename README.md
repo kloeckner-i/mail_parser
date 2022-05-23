@@ -14,7 +14,7 @@ The package can be installed by adding `mail_parser` to your list of dependencie
 ```elixir
 def deps do
   [
-    {:mail_parser, "~> 0.3.0"}
+    {:mail_parser, "~> 0.3"}
   ]
 end
 ```
@@ -28,7 +28,7 @@ You also need to add Rustler to your dependencies when you want to force the com
 ```elixir
 def deps do
   [
-    {:mail_parser, "~> 0.3.0"}
+    {:mail_parser, "~> 0.3"}
     {:rustler, ">= 0.0.0", optional: true}
   ]
 end

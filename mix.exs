@@ -1,7 +1,7 @@
 defmodule MailParser.MixProject do
   use Mix.Project
 
-  @version "0.3.0-dev"
+  @version "0.3.1"
   @repo_url "https://github.com/kloeckner-i/mail_parser"
 
   def project do
