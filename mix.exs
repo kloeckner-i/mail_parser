@@ -12,7 +12,7 @@ defmodule MailParser.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       docs: docs(),
-      description: "NIF binding of mail_parsser using Rustler",
+      description: "NIF binding of mail_parser using Rustler",
       package: package()
     ]
   end

@@ -1,6 +1,6 @@
 defmodule MailParser do
   @moduledoc """
-  NIF binding of mail_parsser using Rustler.
+  NIF binding of mail_parser using Rustler.
   """
 
   mix_config = Mix.Project.config()
