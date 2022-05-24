@@ -28,7 +28,7 @@ defmodule MailParser.MixProject do
   defp deps do
     [
       {:rustler, ">= 0.0.0", optional: true},
-      {:rustler_precompiled, "~> 0.4.1", github: "philss/rustler_precompiled"},
+      {:rustler_precompiled, "~> 0.5"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
