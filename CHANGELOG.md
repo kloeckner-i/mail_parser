@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.3.3] - 2022-05-24
+
+- Bump `:rustler_precompiled` to v0.5.1
+- Fix typo in project description
+
 ## [0.3.2] - 2022-05-23
 
 - Use fork of rustler_precompiled which adds `aarch64-unknown-linux-musl` to the available targets
@@ -25,9 +30,10 @@
 
 ## [0.1.0] - 2022-05-17
 
-[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.3.2...HEAD
-[0.3.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.2
-[0.3.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.1
+[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.3.3...HEAD
+[0.3.3]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.3
+[0.3.2]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.2
+[0.3.1]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.1
 [0.3.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.0
 [0.2.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.2.0
 [0.1.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.1.0
