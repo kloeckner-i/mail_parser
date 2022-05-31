@@ -3,8 +3,6 @@ name: CI
 on:
   pull_request:
   push:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
@@ -21,12 +19,12 @@ jobs:
       matrix:
         include:
           - pair:
-              elixir: 1.13.4
-              otp: 24.x
+              elixir: '1.13.4'
+              otp: '25'
             lint: lint
           - pair:
-              elixir: 1.12.3
-              otp: 24.x
+              elixir: '1.12.3'
+              otp: '24'
     steps:
       - uses: actions/checkout@v2
 
