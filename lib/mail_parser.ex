@@ -7,7 +7,7 @@ defmodule MailParser do
   version = mix_config[:version]
   github_url = mix_config[:package][:links]["GitHub"]
 
-  @precompilation_targets ~w(
+  targets = ~w(
     aarch64-apple-darwin
     aarch64-unknown-linux-gnu
     aarch64-unknown-linux-musl
@@ -25,7 +25,7 @@ defmodule MailParser do
     base_url: "#{github_url}/releases/download/v#{version}",
     force_build: System.get_env("FORCE_BUILD") in ["1", "true"],
     version: version,
-    targets: @precompilation_targets
+    targets: targets
 
   alias __MODULE__.Attachment
 
