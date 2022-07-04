@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.3.4] - 2022-07-04
+
+- Fix the precompilation build for targets using `cross` by adding a `Cross.toml` file with a setting telling to read the `RUSTLER_NIF_VERSION` env var from the host machine
+- Bump `cross` to v0.2.2
+
 ## [0.3.3] - 2022-05-24
 
 - Bump `:rustler_precompiled` to v0.5.1
@@ -30,7 +35,8 @@
 
 ## [0.1.0] - 2022-05-17
 
-[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.3.3...HEAD
+[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.3.4...HEAD
+[0.3.3]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.4
 [0.3.3]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.3
 [0.3.2]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.2
 [0.3.1]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.1
