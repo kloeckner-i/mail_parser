@@ -2,8 +2,7 @@
 // See https://github.com/rusterlium/rustler/issues/470
 #![allow(clippy::extra_unused_lifetimes)]
 
-use mail_parser::MimeHeaders;
-use mail_parser::{Message, MessagePart};
+use mail_parser::{Message, MessagePart, MimeHeaders};
 use rustler::{Atom, Binary, Env, Error, NifResult, NifStruct, OwnedBinary, Term};
 use rustler::{Decoder, Encoder};
 
