@@ -2,7 +2,8 @@
 // See https://github.com/rusterlium/rustler/issues/470
 #![allow(clippy::extra_unused_lifetimes)]
 
-use mail_parser::{BodyPart, Message, MessageAttachment, MessagePart};
+use mail_parser::MimeHeaders;
+use mail_parser::{Message, MessagePart};
 use rustler::{Atom, Binary, Env, Error, NifResult, NifStruct, OwnedBinary, Term};
 use rustler::{Decoder, Encoder};
 
@@ -20,8 +21,8 @@ struct Attachment {
     content_bytes: ContentBytes,
 }
 
-impl Attachment {
-    fn create<'x>(part: &'x impl BodyPart<'x>) -> Attachment {
+impl From<&MessagePart<'_>> for Attachment {
+    fn from(part: &MessagePart) -> Self {
         let name = part.get_attachment_name().unwrap_or("untitled").to_string();
         let content_bytes = ContentBytes::new(part.get_contents());
 
@@ -64,45 +65,20 @@ impl Decoder<'_> for ContentBytes {
     }
 }
 
-fn extract_attachments(message: &Message) -> Vec<Attachment> {
-    let mut acc = Vec::new();
-
-    for attachment in message.get_attachments() {
-        match attachment {
-            MessagePart::Text(text) | MessagePart::Html(text) => {
-                acc.push(Attachment::create(text));
-            }
-
-            MessagePart::Binary(blob) | MessagePart::InlineBinary(blob) => {
-                acc.push(Attachment::create(blob));
-            }
-
-            MessagePart::Message(attached_message) => {
-                match &attached_message.body {
-                    MessageAttachment::Parsed(message) => {
-                        acc.extend(extract_attachments(message));
-                    }
-                    MessageAttachment::Raw(_raw_bytes) => {
-                        if let Some(message) = attached_message.parse_raw() {
-                            acc.extend(extract_attachments(&message));
-                        }
-                    }
-                }
-
-                acc.push(Attachment::create(attached_message));
-            }
-
-            MessagePart::Multipart(_multipart_message) => (),
-        }
-    }
-
-    acc
+fn get_attachments(message: &Message) -> Vec<Attachment> {
+    message
+        .get_attachments()
+        .flat_map(|attachment| match attachment.get_message() {
+            Some(nested_message) => get_attachments(&nested_message),
+            None => Vec::from([attachment.into()]),
+        })
+        .collect()
 }
 
 #[rustler::nif]
 fn extract_nested_attachments(raw_message: &str) -> NifResult<(Atom, Vec<Attachment>)> {
     match Message::parse(raw_message.as_bytes()) {
-        Some(message) => Ok((atoms::ok(), extract_attachments(&message))),
+        Some(message) => Ok((atoms::ok(), get_attachments(&message))),
         None => Err(Error::Atom("error")),
     }
 }
