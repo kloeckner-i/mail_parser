@@ -1,7 +1,3 @@
-// Since Rust 1.62.0 the NifStruct macro causes a clippy warning.
-// See https://github.com/rusterlium/rustler/issues/470
-#![allow(clippy::extra_unused_lifetimes)]
-
 use mail_parser::{Message, MessagePart, MimeHeaders};
 use rustler::{Atom, Binary, Env, Error, NifResult, NifStruct, OwnedBinary, Term};
 use rustler::{Decoder, Encoder};
