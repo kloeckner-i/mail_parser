@@ -64,7 +64,7 @@ fn get_attachments(message: &Message) -> Vec<Attachment> {
     message
         .get_attachments()
         .flat_map(|attachment| match attachment.get_message() {
-            Some(nested_message) => get_attachments(&nested_message),
+            Some(nested_message) => get_attachments(nested_message),
             None => Vec::from([attachment.into()]),
         })
         .collect()
