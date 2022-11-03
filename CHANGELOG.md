@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+## [0.4.1] - 2022-11-03
+
+- Bump `mail-parser` to 0.7.0
+- Bump `rustler` to 0.26.0
+
 ## [0.4.0] - 2022-08-01
 
 - Upgrade `mail-parser` to 0.5.0
@@ -40,7 +45,8 @@
 
 ## [0.1.0] - 2022-05-17
 
-[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.4.0...HEAD
+[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.4.1...HEAD
+[0.4.1]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.4.1
 [0.4.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.4.0
 [0.3.4]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.4
 [0.3.3]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.3
