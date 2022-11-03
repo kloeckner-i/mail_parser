@@ -5,7 +5,7 @@ In order to release a new version to Hex.pm we need to:
 1. List the changes in the `CHANGELOG.md` file
 2. Update the `README.md`, `CHANGELOG.md` and `mix.exs` with the new version
 3. Commit and create a tag for that version
-4. Push the changes to the repository with: `git push origin master --tags`
+4. Push the changes to the repository with: `git push origin main --tags`
 5. Wait for the CI to build all release artifacts
 6. Run `mix rustler_precompiled.download MailParser --all --print`
 7. Copy the output of the mix task and add it to the release notes
