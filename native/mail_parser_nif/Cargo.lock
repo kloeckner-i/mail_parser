@@ -25,9 +25,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "mail-parser"
-version = "0.7.0"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f9c5c7e7ee68a597425d5e4134dfa0dbbc1f86cc047c9a8c1dde1bf34fafe461"
+checksum = "80f330933d5287bcc21be7286850b353f22e7d66fa35d1c545ab030fd934b386"
 
 [[package]]
 name = "mail_parser_nif"
