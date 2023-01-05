@@ -18,13 +18,13 @@ struct Attachment {
 
 impl From<&MessagePart<'_>> for Attachment {
     fn from(part: &MessagePart) -> Self {
-        let name = part.get_attachment_name().unwrap_or("untitled").to_string();
-        let content_bytes = ContentBytes::new(part.get_contents());
+        let name = part.attachment_name().unwrap_or("untitled").to_string();
+        let content_bytes = ContentBytes::new(part.contents());
 
-        let content_type = part.get_content_type().map(|content_type| {
-            let roottype = content_type.get_type();
+        let content_type = part.content_type().map(|content_type| {
+            let roottype = content_type.ctype();
 
-            match content_type.get_subtype() {
+            match content_type.subtype() {
                 Some(subtype) => format!("{roottype}/{subtype}"),
                 None => roottype.to_string(),
             }
@@ -62,8 +62,8 @@ impl Decoder<'_> for ContentBytes {
 
 fn get_attachments(message: &Message) -> Vec<Attachment> {
     message
-        .get_attachments()
-        .flat_map(|attachment| match attachment.get_message() {
+        .attachments()
+        .flat_map(|attachment| match attachment.message() {
             Some(nested_message) => get_attachments(nested_message),
             None => Vec::from([attachment.into()]),
         })
