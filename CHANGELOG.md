@@ -1,6 +1,11 @@
 # Changelog
 
-## [Unreleased]
+## [0.5.0] - 2023-01-25
+
+- Drop NIF version 2.14
+- Simplify release workflow
+- Bump rustler to 0.27.0
+- Bump mail-parser to 0.8.0
 
 ## [0.4.1] - 2022-11-03
 
@@ -45,7 +50,8 @@
 
 ## [0.1.0] - 2022-05-17
 
-[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.4.1...HEAD
+[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.5.0
 [0.4.1]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.4.1
 [0.4.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.4.0
 [0.3.4]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.3.4
