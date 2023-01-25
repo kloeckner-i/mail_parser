@@ -19,9 +19,16 @@ defmodule MailParser do
     x86_64-unknown-linux-musl
   )
 
+  mode =
+    case Mix.env() do
+      env when env in [:prod, :bench] -> :release
+      _env -> :debug
+    end
+
   use RustlerPrecompiled,
     otp_app: :mail_parser,
     crate: :mail_parser_nif,
+    mode: mode,
     base_url: "#{github_url}/releases/download/v#{version}",
     force_build: System.get_env("FORCE_BUILD") in ["1", "true"],
     version: version,

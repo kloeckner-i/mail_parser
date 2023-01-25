@@ -45,9 +45,9 @@ checksum = "2dffe52ecf27772e601905b7522cb4ef790d2cc203488bbd0e2fe85fcb74566d"
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.49"
+version = "1.0.50"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "57a8eca9f9c4ffde41714334dee777596264c7825420f521abc92b5b5deb63a5"
+checksum = "6ef7d57beacfaf2d8aee5937dab7b7f28de3cb8b1828479bb5de2a7106f2bae2"
 dependencies = [
  "unicode-ident",
 ]
@@ -63,9 +63,9 @@ dependencies = [
 
 [[package]]
 name = "regex"
-version = "1.7.0"
+version = "1.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e076559ef8e241f2ae3479e36f97bd5741c0330689e217ad51ce2c76808b868a"
+checksum = "48aaa5748ba571fb95cd2c85c09f629215d3a6ece942baa100950af03a34f733"
 dependencies = [
  "aho-corasick",
  "memchr",
@@ -80,9 +80,9 @@ checksum = "456c603be3e8d448b072f410900c09faf164fbce2d480456f50eea6e25f9c848"
 
 [[package]]
 name = "rustler"
-version = "0.26.0"
+version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d61e8ddf75de20513455d7b6f17241a595abbb01b53a6340cecc798a1b13422d"
+checksum = "b7a4037063eab996ea56fada36d3cc982d501ed485b36a73eabdaec99b4acf6e"
 dependencies = [
  "lazy_static",
  "rustler_codegen",
@@ -91,9 +91,9 @@ dependencies = [
 
 [[package]]
 name = "rustler_codegen"
-version = "0.26.0"
+version = "0.27.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "baa2e45c0165272070f80ce93bcd7dd5407a3c84a1ef73ab9900e00f00ef3d36"
+checksum = "b0dbdc98de074c324945ecc2e3ecefa47948ad8e6ed4ecf6f3424f1293a6188d"
 dependencies = [
  "heck",
  "proc-macro2",
