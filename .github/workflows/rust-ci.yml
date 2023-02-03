@@ -35,21 +35,13 @@ jobs:
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
       - name: Install Rust toolchain
-        uses: actions-rs/toolchain@v1
+        uses: dtolnay/rust-toolchain@stable
         with:
-          profile: minimal
-          toolchain: stable
+          target: ${{ matrix.job.target }}
           components: rustfmt, clippy
-          override: true
 
       - name: Run rustfmt in check mode
-        uses: actions-rs/cargo@v1
-        with:
-          command: fmt
-          args: --manifest-path=${{ matrix.manifest }} --all -- --check
+        run: cargo fmt --manifest-path=${{ matrix.manifest }} --all -- --check
 
       - name: Run clippy
-        uses: actions-rs/cargo@v1
-        with:
-          command: clippy
-          args: --manifest-path=${{ matrix.manifest }} -- -Dwarnings
+        run: cargo clippy --manifest-path=${{ matrix.manifest }} -- -Dwarnings
