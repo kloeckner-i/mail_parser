@@ -8,6 +8,7 @@ on:
   pull_request:
     paths:
       - "native/**"
+      - ".github/workflows/rust-ci.yml"
   workflow_dispatch:
 
 jobs:
