@@ -7,32 +7,13 @@ defmodule MailParser do
   version = mix_config[:version]
   github_url = mix_config[:package][:links]["GitHub"]
 
-  targets = ~w(
-    aarch64-apple-darwin
-    aarch64-unknown-linux-gnu
-    aarch64-unknown-linux-musl
-    arm-unknown-linux-gnueabihf
-    x86_64-apple-darwin
-    x86_64-pc-windows-gnu
-    x86_64-pc-windows-msvc
-    x86_64-unknown-linux-gnu
-    x86_64-unknown-linux-musl
-  )
-
-  mode =
-    case Mix.env() do
-      env when env in [:prod, :bench] -> :release
-      _env -> :debug
-    end
-
   use RustlerPrecompiled,
     otp_app: :mail_parser,
     crate: :mail_parser_nif,
-    mode: mode,
+    mode: if(Mix.env() in [:prod, :bench], do: :release, else: :debug),
     base_url: "#{github_url}/releases/download/v#{version}",
     force_build: System.get_env("FORCE_BUILD") in ["1", "true"],
-    version: version,
-    targets: targets
+    version: version
 
   alias __MODULE__.Attachment
 
