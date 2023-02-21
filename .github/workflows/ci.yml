@@ -57,6 +57,7 @@ jobs:
 
       - name: Spell check
         uses: crate-ci/typos@master
+        if: ${{ matrix.lint }}
 
       - name: Install Dependencies
         run: mix deps.get
