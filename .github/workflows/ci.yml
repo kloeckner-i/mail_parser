@@ -19,25 +19,51 @@ jobs:
       matrix:
         include:
           - pair:
-              elixir: "1.14.3"
-              otp: "25"
+              elixir: "1.14.4"
+              otp: "26.0"
             lint: lint
           - pair:
               elixir: "1.12.3"
-              otp: "24"
+              otp: "24.3"
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/cache@v3.3.1
+      - uses: erlef/setup-beam@v1
+        id: beam
         with:
-          path: |
-            deps
-            _build
-          key: ${{ runner.os }}-${{ matrix.elixir }}-${{ matrix.otp }}-mix-${{ hashFiles(format('{0}{1}', github.workspace, '/mix.lock')) }}
-          restore-keys: |
-            ${{ runner.os }}-${{ matrix.elixir }}-${{ matrix.otp }}-mix-
+          otp-version: ${{matrix.pair.otp}}
+          elixir-version: ${{matrix.pair.elixir}}
+          version-type: "strict"
 
-      - uses: actions/cache@v3.3.1
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache deps
+        id: cache-deps
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-elixir-deps
+        with:
+          path: deps
+          key: ${{ runner.os }}-mix-${{ env.cache-name }}-${{ hashFiles('**/mix.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-mix-${{ env.cache-name }}-
+
+      - name: Cache compiled build
+        id: cache-build
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-compiled-build
+        with:
+          path: _build
+          key: ${{ runner.os }}-mix-${{ env.cache-name }}-${{ matrix.pair.elixir }}-${{ matrix.pair.otp }}-${{ hashFiles('**/mix.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-mix-${{ env.cache-name }}-${{ matrix.pair.elixir }}-${{ matrix.pair.otp }}-
+            ${{ runner.os }}-mix-${{ env.cache-name }}-
+            ${{ runner.os }}-mix-
+
+      - name: Cache NIF build
+        uses: actions/cache@v3
         with:
           path: |
             ~/.cargo/bin/
@@ -47,20 +73,19 @@ jobs:
             native/mail_parser_nif/target/
           key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
-      - uses: erlef/setup-beam@v1
-        with:
-          otp-version: ${{matrix.pair.otp}}
-          elixir-version: ${{matrix.pair.elixir}}
+      - name: Clean to rule out incremental build as a source of flakiness
+        if: github.run_attempt != '1'
+        run: |
+          mix deps.clean --all
+          mix clean
+        shell: sh
 
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
+      - name: Install Dependencies
+        run: mix deps.get
 
       - name: Spell check
         uses: crate-ci/typos@master
         if: ${{ matrix.lint }}
-
-      - name: Install Dependencies
-        run: mix deps.get
 
       - run: mix format --check-formatted
         if: ${{ matrix.lint }}
