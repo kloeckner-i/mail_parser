@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.0] - 2023-05-22
+
+- Add support for OTP 26
+
 ## [0.6.1] - 2023-03-30
 
 - Update dependencies
@@ -65,7 +69,8 @@
 
 ## [0.1.0] - 2022-05-17
 
-[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.6.1...HEAD
+[unreleased]: https://github.com/kloeckner-i/mail_parser/compare/v0.7.0...HEAD
+[0.7.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.7.0
 [0.6.1]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.6.1
 [0.6.0]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.6.0
 [0.5.1]: https://github.com/kloeckner-i/mail_parser/releases/tag/v0.5.1

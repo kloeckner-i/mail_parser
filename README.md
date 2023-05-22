@@ -14,7 +14,7 @@ The package can be installed by adding `mail_parser` to your list of dependencie
 ```elixir
 def deps do
   [
-    {:mail_parser, "~> 0.6"}
+    {:mail_parser, "~> 0.7"}
   ]
 end
 ```
