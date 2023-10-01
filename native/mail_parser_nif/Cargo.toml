@@ -12,7 +12,7 @@ path = "src/lib.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-mail-parser = { version = "0.8.2", default-features = false }
+mail-parser = { version = "0.9.1", default-features = false }
 rustler = "0.29.1"
 
 [profile.release]
